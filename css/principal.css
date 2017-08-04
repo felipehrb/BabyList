@@ -1,0 +1,247 @@
+@media screen and (max-device-width: 360px)
+/*Sansung Galaxy S5*/
+{	
+	#conteudo > div{
+		position: relative;
+    	display: none;
+    	width: 100vh;
+	}
+
+	#conteudo > div:target{
+	    display: block;
+	    width: 100vh;
+	}
+
+	.conteiner-fluid{
+		padding-left: 5px;
+		height: 100%;
+		width: 100%;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+
+	div{
+		width: 100%;
+		overflow: hidden;
+	}
+
+	table{
+		text-align: center;
+		
+		margin-bottom: 5px;
+	}
+
+	th,td{
+		text-align: center;
+		width: 1px;
+		height: 1px;
+	}
+
+	#menuHeader{
+		padding: 15px 30px 30px 30px;
+		margin-top: 15px;
+	}
+
+	.AlertaCampo{
+		background-color: red;
+		color: #000000;
+	}
+
+	#header{
+		border-bottom-style: solid;
+		text-align: center;
+		background-color: pink;
+	}
+
+	#principal{
+		height: 100vw;
+		
+	}
+
+	#menu{
+		display: none;
+	}
+
+	#titleHeader > h1{
+		text-align: center;
+		padding: 0px 0px 10px 0px;
+	}
+
+	#resumo{
+		padding: 30px 30px 30px 30px;
+		height: 100vh;
+		
+	}
+
+	.modal{
+		margin-top: 20%;
+		display: block;
+		position: relative;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		
+		
+	}
+
+	.modal-content{
+
+		background-color: #fefefe;
+	    margin: 5% auto;
+	    padding: 20px;
+	    border: 1px solid #888;
+	    width: 100vw;
+	   	height: 80%;
+		overflow: scroll;
+	}
+
+	
+	.close {
+	    color: #aaa;
+	    float: right;
+	    font-size: 28px;
+	    font-weight: bold;
+	}
+
+	
+
+	.close:hover,
+	.close:focus {
+	    color: black;
+	    text-decoration: none;
+	    cursor: pointer;
+	}
+}
+
+@media screen and (min-device-width: 361px)
+{	
+
+	#conteudo{
+		padding-top: 20px;
+	}
+
+	
+
+	.removerAlterarCol{
+		width: 70px;
+	}
+
+	table{
+		margin-bottom: 20px;
+		margin-top: 40px;
+		text-align: center;
+		border-collapse: collapse;
+	}
+
+	td{
+		text-align: center;
+		width: 200px;
+		height: 40px;
+		border-bottom: 40px solid transparent;
+	}
+
+
+	.form-control{
+		width: 20%;
+	}
+
+	.form-group{
+		width: 20%;
+	}
+
+	#conteudo > h1{
+		text-align: center;
+	}
+
+	#conteudo > div, #conteudo:target ~ #dashboard{
+		position: relative;
+    	display: none;
+	}
+
+	#conteudo > div:target{
+	    display: block;
+	}
+
+	#menuHeader{
+		display: none;
+	}
+
+	#header{
+		border-bottom-style: solid;
+		text-align: center;
+		background-color: #ffccee;
+	}
+
+	#principal{
+		height: 100vh;
+		background-color: #ffe6f7;
+	}
+
+	#menu{
+		height: 100vh;
+		padding: 30px 30px 30px 30px;
+		background-color: #ffe6f7;
+		border-color: white;
+		border-style: solid;
+	}
+
+	#resumo{
+		padding: 30px 30px 30px 30px;
+		height: 100vh;
+		border-bottom-style: solid;
+
+	}
+
+	.modal{
+		display: block;
+		position: relative;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		width: 60%;
+		height: 100%;
+		overflow: auto;
+	}
+
+	.modal-content{
+		background-color: #fefefe;
+	    margin: 5% auto;
+	    margin-left: 30%;
+	    padding: 20px;
+	    border: 1px solid;
+	    
+	}
+	
+	.AlertaCampo{
+		
+		background-color: red;
+		color: #000000;
+
+	}
+
+	.close {
+	    color: #aaa;
+	    float: right;
+	    font-size: 28px;
+	    font-weight: bold;
+	}
+
+
+	.removerAlterarInfo{
+		text-align: center;
+	}
+
+
+	.close:hover,
+	.close:focus {
+	    color: black;
+	    text-decoration: none;
+	    cursor: pointer;
+	}
+
+	#imputRequired{
+		border-color: red;
+	}
+
+}

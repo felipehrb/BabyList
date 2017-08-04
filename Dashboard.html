@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Baby List</title>
+		<meta charset="uft-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Health Track">
+		<meta name="author" content="Felipe Herbst">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+ 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+ 		
+</head>
+	</head>
+	<body>
+
+			<script src="js/jquery.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script src="js/misc.js"></script>
+			<script src="js/modalQuery.js"></script>
+
+			<script>
+				    (function(){
+				        if (window.location.hash) {
+				            window.location.hash;
+				        } else {
+				            window.location.hash = '#dashboard';
+				        };
+				    })();
+		    </script>
+
+			<div class="conteiner-fluid">
+				<header id="header" class="row">
+					<nav id="menuHeader" class="col-xs-3">
+						<span class="glyphicon glyphicon-th-list" aria-hidden="true" id="menu1" data-toggle="dropdown"></span>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+					      <li role="presentation"><a role="menuitem" tabindex="-1" href="#dashboard">Lista</a></li>
+					      <li role="presentation" class="divider"></li>
+					      <li role="presentation"><a role="menuitem" tabindex="-1" href="#peso">Dados cadastro</a></li>
+					    </ul>
+					</nav>
+					<div id="titleHeader" class="col-xs-6 col-md-12">
+						<h1>Baby List</h1>
+					</div>
+
+				</header>
+				<div id="principal" class="row">
+					<nav id="menu" class="col-xs-3 col-md-2">
+						<p> <img src="" width="120" height="120"></p>
+						<p> <a href="#lista" id="linkLista">Lista</a></p>
+						<p> <a href="#cadastro" id="linkCadastro">Dados cadastro</a></p>
+						
+					</nav>
+					<div id="conteudo" class="col-xs-12 col-md-10">
+							
+							<div id="lista">
+								<h1>Lista de presentes</h1>
+								<table class="tableList">
+								<thead>
+									
+								</thead>
+
+								<tbody>
+									<tr>
+										<td><label><input type="checkbox"></label></td>
+										<td><img src="" width="120" height="120"></td>
+										<td>90kg</td>
+										<td>click aqui</td>
+										<td class="removerAlterarInfo"><a href="#peso">X</a></td>
+										<td class="removerAlterarInfo"><a href="#peso">X</a></td>
+									</tr>
+									<tr>
+										<td><label><input type="checkbox"></label></td>
+										<td><img src="" width="120" height="120"></td>
+										<td>90kg</td>
+										<td>click aqui</td>
+										<td class="removerAlterarInfo"><a href="#peso">X</a></td>
+										<td class="removerAlterarInfo"><a href="#peso">X</a></td>
+									</tr>
+								</tbody>
+								</table>
+								
+								<button id="adicionarPresente" class="btn btn-default" value="HTML">Adicionar</button>
+								
+							</div>
+
+							<div id="cadastro">
+								<form id="cadastrais" class="form" method="POST" action="Dashboard.html">
+									<h1>Dados Cadastrais</h1>
+									<div class="alert alert-success" role="alert">
+										<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+										<span class="sr-only">Error:</span>
+										Login realizado com sucesso.
+									</div>
+									<div class="alert alert-danger" role="alert">
+										<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+										<span class="sr-only">Error:</span>
+										Entre com usuario e senha validos.
+									</div>
+									<div class="form-group">
+										<label id="usuarioLabel" for="usuario">Nome:</label>
+										<input type="text" id="usuario" class="form-control">
+									</div>
+									<div class="form-group">
+										<label id="senhaLabel" for="senha">Data Aniversario:</label>
+										<input type="text" id="senha" class="form-control">
+									</div>
+									<div class="form-group">
+										<label id="senhaLabel" for="senha">Nome Filho(a):</label>
+										<input type="text" id="senha" class="form-control">
+									</div>
+									
+									<button id="entrar" type="submit" class="btn btn-default" value="HTML">Entrar</button>
+								</form>
+
+								
+							</div>
+				</div>
+
+
+			</div>
+			
+
+			<div id="ModalCadastroPresente" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<p><form id="formCadastroAtividade" method="POST" action="#atividades">
+							<h1>Cadastrar Atividade.</h1>
+							<div class="alert alert-success" role="alert">
+								<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+								<span class="sr-only">Error:</span>
+								Login realizado com sucesso.
+							</div>
+							<div class="alert alert-danger" role="alert">
+								<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+								<span class="sr-only">Error:</span>
+								Entre com usuario e senha validos.
+							</div>
+							<div class="form-group">
+								<label id="lbnCcategoriaAtividade" for="iptCategoriaAtividade">Categoria:</label>
+								<input type="text" id="iptCategoriaAtividade" class="form-control">
+								<span class="AlertaCampo">Categoria é obrigatorio</span>
+							</div>
+							<div class="form-group">
+								<label id="lbnNomeAtividade" for="iptNomeAtividade">Nome:</label>
+								<input type="text" id="iptNomeAtividade" class="form-control">
+								<span class="AlertaCampo">Nome é obrigatorio</span>
+							</div>
+							<div class="form-group">
+								<label id="lbnCaloriasAtividade" for="iptCaloriasAtividade">Calorias:</label>
+								<input type="text" id="iptCaloriasAtividade" class="form-control">
+								<span class="AlertaCampo">Calorias é obrigatorio</span>
+							</div>
+							<div class="form-group">
+								<label id="lbnRepeticaoAtividade" for="iptRepeticaoAtividade">Repetições:</label>
+								<input type="text" id="iptRepeticaoAtividade" class="form-control">
+								<span class="AlertaCampo">Repetiçoes é obrigatorio</span>
+							</div>
+							<button type="submit" class="btn btn-default" value="HTML">Cadastrar</button>
+						</form></p>
+				</div>
+			</div>
+
+			<div id="alimentacaoCadastro" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<p><form id="formCadastroAlimentacao" method="POST" action="#alimentacao">
+							<h1>Cadastrar Alimentacção.</h1>
+							<div class="alert alert-success" role="alert">
+								<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+								<span class="sr-only">Error:</span>
+								Login realizado com sucesso.
+							</div>
+							<div class="alert alert-danger" role="alert">
+								<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+								<span class="sr-only">Error:</span>
+								Entre com usuario e senha validos.
+							</div>
+							<div class="form-group">
+								<label id="lbnNomeAlimentacao" for="iptNomeAlimentacao">Categoria:</label>
+								<input type="text" id="iptNomeAlimentacao" class="form-control">
+								<span class="AlertaCampo">Categoria é obrigatorio</span>
+							</div>
+							<div class="form-group">
+								<label id="lbnCaloriasAlimentacao" for="iptCaloriasAlimentacao">Nome:</label>
+								<input type="text" id="iptCaloriasAlimentacao" class="form-control">
+								<span class="AlertaCampo">Nome é obrigatorio</span>
+							</div>
+							<div class="form-group">
+								<label id="lbnProteinaAlimentacao" for="iptProteinaAlimentacao">Calorias:</label>
+								<input type="text" id="iptProteinaAlimentacao" class="form-control">
+								<span class="AlertaCampo">Calorias é obrigatorio</span>
+							</div>
+							<div class="form-group">
+								<label id="lbnHorarioAlimentacao" for="iptHorarioAlimentacao">Repetições:</label>
+								<input type="text" id="iptHorarioAlimentacao" class="form-control">
+								<span class="AlertaCampo">Repetições é obrigatorio</span>
+							</div>
+							<button type="submit" class="btn btn-default" value="HTML">Cadastrar</button>
+						</form></p>
+				</div>
+			</div>
+
+			<div id="pressaoCadastro" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<p><form id="formCadastroPressao" method="POST" action="#pressao">
+							<h1>Cadastrar Pressão.</h1>
+							<div class="alert alert-success" role="alert">
+								<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+								<span class="sr-only">Error:</span>
+								Cadastro realizado com sucesso.
+							</div>
+							<div class="alert alert-danger" role="alert">
+								<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+								<span class="sr-only">Error:</span>
+								Verifique dados preenchidos.
+							</div>
+							<div class="form-group">
+								<label id="lbnDataPressao" for="iptDataPressao">Data:</label>
+								<input type="text" id="iptDataPressao" class="form-control">
+								<span class="AlertaCampo">Data de medida é obrigatorio</span>
+							</div>
+							<div class="form-group">
+								<label id="lbnBaixaPressao" for="iptBaixaPressao">Baixa:</label>
+								<input type="text" id="iptBaixaPressao" class="form-control">
+								<span class="AlertaCampo">Pressão baixa é obrigatorio</span>
+							</div>
+							<div class="form-group">
+								<label id="lbnAltaPressao" for="iptAltaPressao">Alta:</label>
+								<input type="text" id="iptAltaPressao" class="form-control">
+								<span class="AlertaCampo">Pressão alta é obrigatorio</span>
+							</div>
+							<button type="submit" class="btn btn-default" value="HTML">Cadastrar</button>
+						</form></p>
+				</div>
+			</div>
+
+			<div id="pesoCadastro" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<p><form id="formCadastroPeso" method="POST" action="#peso">
+							<h1>Cadastrar Pressão.</h1>
+							<div class="alert alert-success" role="alert">
+								<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+								<span class="sr-only">Error:</span>
+								Cadastro realizado com sucesso.
+							</div>
+							<div class="alert alert-danger" role="alert">
+								<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+								<span class="sr-only">Error:</span>
+								Verifique dados preenchidos.
+							</div>
+							<div class="form-group">
+								<label id="lbnDataPeso" for="iptDataPeso">Data:</label>
+								<input type="text" id="iptDataPeso" class="form-control">
+								<span class="AlertaCampo">Data pesagem é obrigatorio</span>
+							</div>
+							<div class="form-group">
+								<label id="lbnPesoPeso" for="iptPesoPeso">Peso:</label>
+								<input type="text" id="iptPesoPeso" class="form-control">
+								<span class="AlertaCampo">Peso é obrigatorio</span>
+							</div>
+							
+							<button type="submit" class="btn btn-default" value="HTML">Cadastrar</button>
+						</form></p>
+				</div>
+			</div>
+
+			<script src="js/modal.js"></script>
+		
+	<body>
+</html>
