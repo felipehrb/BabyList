@@ -1,21 +1,18 @@
+/*Celular */
 @media screen and (max-device-width: 360px)
 /*Sansung Galaxy S5*/
 {	
 	#conteudo > div{
 		position: relative;
     	display: none;
-    	width: 100vh;
-	}
+    }
 
 	#conteudo > div:target{
 	    display: block;
-	    width: 100vh;
 	}
 
 	.conteiner-fluid{
 		padding-left: 5px;
-		height: 100%;
-		width: 100%;
 		overflow-x: hidden;
 		overflow-y: hidden;
 	}
@@ -51,11 +48,6 @@
 		border-bottom-style: solid;
 		text-align: center;
 		background-color: pink;
-	}
-
-	#principal{
-		height: 100vw;
-		
 	}
 
 	#menu{
@@ -114,14 +106,19 @@
 	}
 }
 
+/* Tela Grande */
 @media screen and (min-device-width: 361px)
 {	
-
-	#conteudo{
-		padding-top: 20px;
+	body{
+		overflow-x: hidden;
+		max-width: 100%;
 	}
 
-	
+	#conteudo{
+		padding-top: 3%;
+		display: table;
+		
+	}	
 
 	.removerAlterarCol{
 		width: 70px;
@@ -141,6 +138,9 @@
 		border-bottom: 40px solid transparent;
 	}
 
+	.descricao{
+		width: 400px;
+	}
 
 	.form-control{
 		width: 20%;
@@ -154,7 +154,7 @@
 		text-align: center;
 	}
 
-	#conteudo > div, #conteudo:target ~ #dashboard{
+	#conteudo > div, #conteudo:target ~ #lista{
 		position: relative;
     	display: none;
 	}
@@ -167,31 +167,36 @@
 		display: none;
 	}
 
+
 	#header{
 		border-bottom-style: solid;
 		text-align: center;
 		background-color: #ffccee;
+		height: 3%;
 	}
 
 	#principal{
-		height: 100vh;
 		background-color: #ffe6f7;
+	}
+
+	#container{
+		top: 50%;
+		left: 50%;
+		padding-left: 10%;
+		background-color: #ffe6f7;
+
 	}
 
 	#menu{
-		height: 100vh;
-		padding: 30px 30px 30px 30px;
+		padding-left: 3%;
+		padding-right: 3%;
+		padding-top: 4%;
+		display: table;
 		background-color: #ffe6f7;
-		border-color: white;
-		border-style: solid;
+		margin-left: 10%;
+		
 	}
 
-	#resumo{
-		padding: 30px 30px 30px 30px;
-		height: 100vh;
-		border-bottom-style: solid;
-
-	}
 
 	.modal{
 		display: block;
@@ -227,9 +232,9 @@
 	    font-weight: bold;
 	}
 
-
 	.removerAlterarInfo{
 		text-align: center;
+		display: none;
 	}
 
 
@@ -242,6 +247,10 @@
 
 	#imputRequired{
 		border-color: red;
+	}
+
+	#adicionarPresente{
+		display: none;
 	}
 
 }
